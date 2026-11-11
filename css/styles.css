@@ -1,0 +1,299 @@
+:root {
+  --primary: #17662e;
+  --primary-dark: #0e3d1b;
+  --secondary: #159e08;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --text-white: #ffffff;
+  --text-green: #baffb0;
+  --radius: 12px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.1);
+  --social-icons: #00290c;
+  --button: #61d356;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #fff; /* Fondo blanco para el body, el footer es oscuro */
+}
+
+.nav-tienda {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: var(--primary);
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.nav-tienda img {
+    width: 100px;
+    margin-left: 40px;
+}
+
+.nav-tienda ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    margin: 0 auto;
+}
+
+.nav-tienda ul li {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    text-align: center;
+    color: var(--text-white);
+    font-size: 14px;
+}
+
+.nav-tienda ul li a {
+    color: var(--text-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 15px;
+}
+
+.nav-tienda ul li a:hover {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+/* --- Estilos del Footer --- */
+.site-footer {
+    background-color: var(--primary-dark);
+    color: var(--text-white);
+    padding: 60px 20px 40px;
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Columnas */
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Títulos (Headers) */
+.footer-column h3 {
+    color: var(--text-green);
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Logo */
+.logo-column {
+    flex: 1.5; /* Toma un poco más de espacio */
+}
+
+.logo-column img {
+    width: 100px;
+}
+
+
+/* .logo {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 0.9;
+    color: #ffffff;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    font-weight: 300;
+    display: block;
+    font-size: 38px;
+} */
+
+/* Listas de enlaces */
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: var(--text-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 15px;
+}
+
+.footer-column ul li a:hover {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+/* --- Formulario Newsletter --- */
+.newsletter-column {
+    flex: 1.5; /* Más ancho para el formulario */
+}
+
+.newsletter-title {
+    font-size: 15px !important;
+    line-height: 1.4;
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.newsletter-form input::placeholder {
+    color: #aaa;
+}
+
+/* Checkbox personalizado */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #e0e0e0;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    margin-right: 8px;
+    accent-color: var(--secondary);
+}
+
+/* Botón */
+.newsletter-form button {
+    background-color: var(--button);
+    color: #333;
+    border: none;
+    padding: 10px 25px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: var(--secondary);
+    color: var(--text-white);
+}
+
+/* Redes Sociales */
+.social-section {
+    margin-top: 30px;
+}
+
+.social-section h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    color: var(--text-white);
+    gap: 10px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: var(--social-icons);
+    color: var(--text-white);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: var(--secondary);
+}
+
+/* --- Botón Flotante de Chat --- */
+/* .chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #6c5ce7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ff4757;
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+} */
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .logo-column {
+        margin-bottom: 20px;
+    }
+
+    .newsletter-column {
+        width: 100%;
+    }
+}
