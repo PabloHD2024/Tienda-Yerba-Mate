@@ -12,6 +12,7 @@
   --shadow-lg: 0 8px 24px rgba(0,0,0,0.1);
   --social-icons: #00290c;
   --button: #61d356;
+  --nav-color: #000000;
 }
 
 
@@ -30,7 +31,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: var(--primary);
+    background-color: var(--nav-color);
     justify-content: center;
     align-items: center;
     text-decoration: none;
@@ -39,7 +40,7 @@ body {
 
 .nav-tienda img {
     width: 100px;
-    margin-left: 40px;
+    margin-left: 60px;
 }
 
 .nav-tienda ul {
@@ -82,8 +83,7 @@ body {
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
