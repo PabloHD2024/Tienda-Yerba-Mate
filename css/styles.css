@@ -74,7 +74,7 @@ body {
 
 .slider-contenedor {
     display: flex;
-    background-image: url(../img/Fondo-1.png);
+    background-image: url(../img/Fondo-6.png);
     background-size: cover;
     background-repeat: no-repeat;
     align-items: center;
@@ -134,6 +134,63 @@ body {
 .card-yerbas:hover {
     box-shadow: var(--shadow-lg);
 }
+
+.info-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.info-section h2 {
+    color: var(--text-white);
+    font-weight: 400;
+    margin-left: 30px;
+}
+
+
+.btn-ver {
+    display: inline-block;
+    color: var(--text-white);
+    border: 1px solid #fff;
+    background: transparent;
+    padding: 15px 40px;
+    text-decoration: none;
+    text-align: center;
+    align-self: flex-start;
+    margin-left: 30px;
+    margin-top: 15px;
+    transition: background 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.btn-ver:hover {
+    background: #fff;
+    color: #000;
+}
+
+.secretos,
+.menues {
+    width: 700px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    margin: 60px 20px;
+}
+
+.secretos {
+    background-image: url(../img/secreto-mate.png);
+}
+
+.menues {
+    background-image: url(../img/merienda-mate-1.png);
+}
+
 
 /* --- Estilos del Footer --- */
 .site-footer {
