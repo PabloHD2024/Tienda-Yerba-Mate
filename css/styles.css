@@ -13,6 +13,8 @@
   --social-icons: #00290c;
   --button: #61d356;
   --nav-color: #000000;
+  --shadow: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.3);
 }
 
 
@@ -35,11 +37,11 @@ body {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    padding: 20px;
+    padding: 35px;
 }
 
 .nav-tienda img {
-    width: 100px;
+    width: 120px;
     margin-left: 60px;
 }
 
@@ -49,22 +51,20 @@ body {
     justify-content: center;
     list-style: none;
     margin: 0 auto;
+    gap: 25px;
 }
 
 .nav-tienda ul li {
-    display: flex;
-    flex-direction: row;
     padding: 10px;
     text-align: center;
     color: var(--text-white);
-    font-size: 14px;
 }
 
 .nav-tienda ul li a {
     color: var(--text-white);
     text-decoration: none;
     transition: color 0.3s ease;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .nav-tienda ul li a:hover {
@@ -72,11 +72,74 @@ body {
     text-decoration: none;
 }
 
+.slider-contenedor {
+    display: flex;
+    background-image: url(../img/Fondo-1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    min-height: 500px;  
+}
+
+.slider-text {
+    color: var(--text-white);
+    padding: 20px;
+    margin-left: 70px;
+}
+
+.slider-text h2 {
+    font-size: 70px;
+}
+
+.slider-text p {
+    font-weight: 100;
+    font-size: 25px;
+}
+
+.productos {
+    display: flex;
+    flex-direction: column;
+    max-width: 1500px;
+    padding: 20px;
+    margin: 0 auto; 
+}
+
+.productos h2 {
+    font-size: 40px;
+    text-align: center;
+    margin: 20px 0 20px;
+}
+
+.yerbas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.yerbas img {
+    width: 250px;
+    height: auto;
+}
+
+.card-yerbas {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    justify-content: center;
+    padding: 15px;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.card-yerbas:hover {
+    box-shadow: var(--shadow-lg);
+}
+
 /* --- Estilos del Footer --- */
 .site-footer {
     background-color: var(--primary-dark);
     color: var(--text-white);
-    padding: 60px 20px 40px;
+    padding: 60px 80px;
     font-size: 14px;
     position: relative;
     overflow: hidden;
@@ -112,24 +175,8 @@ body {
 }
 
 .logo-column img {
-    width: 100px;
+    width: 120px;
 }
-
-
-/* .logo {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 0.9;
-    color: #ffffff;
-    letter-spacing: -1px;
-}
-
-.logo span {
-    font-weight: 300;
-    display: block;
-    font-size: 38px;
-} */
 
 /* Listas de enlaces */
 .footer-column ul {
