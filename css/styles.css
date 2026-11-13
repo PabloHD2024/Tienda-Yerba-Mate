@@ -7,6 +7,8 @@
   --text: #0f172a;
   --text-white: #ffffff;
   --text-green: #baffb0;
+  --text-gray: #4e4e4e;
+  --text-black: #000000;
   --radius: 12px;
   --shadow: 0 2px 8px rgba(0,0,0,0.06);
   --shadow-lg: 0 8px 24px rgba(0,0,0,0.1);
@@ -15,6 +17,9 @@
   --nav-color: #000000;
   --shadow: 0 2px 8px rgba(0,0,0,0.06);
   --shadow-lg: 0 8px 24px rgba(0,0,0,0.3);
+  --background-color: #e9e9e9;
+  --box-shadow: rgba(0, 0, 0, 0.4);
+  --border-white: #ffffff;
 }
 
 
@@ -26,7 +31,7 @@
 
 body {
     font-family: 'Oswald', sans-serif;
-    background-color: #fff; /* Fondo blanco para el body, el footer es oscuro */
+    background-color: var(--bg); 
 }
 
 .nav-tienda {
@@ -152,7 +157,7 @@ body {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px var(--box-shadow);
 }
 
 .secretos::before, .menues::before {
@@ -175,7 +180,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background:var(--box-shadow);
   transition: background 0.3s ease;
   z-index: 2;
 }
@@ -191,7 +196,7 @@ body {
 .secretos h2, .menues h2, .secretos p, .menues p,
 .secretos .btn-ver, .menues .btn-ver {
   z-index: 3;
-  color: #fff;
+  color: var(--text-white);
   margin-left: 40px;
 }
 
@@ -199,7 +204,7 @@ body {
   font-size: 2rem;
   font-weight: 400;
   margin-bottom: 15px;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 4px var(--box-shadow);
   
 }
 
@@ -207,8 +212,8 @@ body {
   display: inline-block;
   width: 80px;
   padding: 10px 25px;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid var(--bg);
+  color: var(--bg);
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
@@ -216,8 +221,8 @@ body {
 }
 
 .btn-ver:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: var(--bg);
+  color: var(--text-black);
   transform: translateY(-2px); 
 }
 
@@ -228,8 +233,66 @@ body {
 
 .secretos:hover::after, 
 .menues:hover::after {
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--box-shadow);
 }
+
+.seccion-yerbas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--background-color);
+    margin-top: 40px;
+}
+
+.titulo-yerbas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-yerbas h3 {
+    font-size: 30px;
+    margin-top: 40px;
+    color: var(--text-gray)
+}
+
+.titulo-yerbas h2 {
+    font-size: 45px;
+    color: var(--text-gray)
+}
+
+.yerba-tipos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+
+.yerba-tipos h3 {
+    font-size: 20px;
+    color: var(--primary);
+    margin-top: 20px;
+}
+
+.yerba-tipos p {
+    width: 350px;
+    font-size: 15px;
+    color: var(--text-gray);
+    text-align: justify;
+}
+
+.yerba-tipos img {
+    width: 650px;
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+
 /* --- Estilos del Footer --- */
 .site-footer {
     background-color: var(--primary-dark);
@@ -266,7 +329,7 @@ body {
 
 /* Logo */
 .logo-column {
-    flex: 1.5; /* Toma un poco más de espacio */
+    flex: 1.5;
 }
 
 .logo-column img {
@@ -310,14 +373,14 @@ body {
     padding: 10px;
     margin-bottom: 10px;
     background-color: transparent;
-    border: 1px solid #fff;
+    border: 1px solid var(--border-white);
     border-radius: 3px;
-    color: #fff;
+    color: var(--text-white);
     font-family: 'Roboto', sans-serif;
 }
 
 .newsletter-form input::placeholder {
-    color: #aaa;
+    color: var(--text-gray);
 }
 
 /* Checkbox personalizado */
@@ -326,7 +389,7 @@ body {
     align-items: center;
     margin-bottom: 20px;
     font-size: 12px;
-    color: #e0e0e0;
+    color: var(--bg);
     cursor: pointer;
 }
 
@@ -338,7 +401,7 @@ body {
 /* Botón */
 .newsletter-form button {
     background-color: var(--button);
-    color: #333;
+    color: var(--text-gray);
     border: none;
     padding: 10px 25px;
     font-family: 'Oswald', sans-serif;
