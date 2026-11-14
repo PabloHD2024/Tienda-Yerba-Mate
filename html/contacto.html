@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <title>Tienda de Yerba Mate</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -27,14 +30,31 @@
         </nav>
     </header>
     <main>
-        <section class="form-contacto">
-            <div>
-                <h2>COMUNICATE CON NOSOTROS</h2>
-            </div>
-        </section>
         <section>
-            <div>
-                <h2>NUESTRAS REDES SOCIALES</h2>
+            <div class="contacto">
+                <div  class="contact-form">
+                    <h2>COMUNICATE CON NOSOTROS</h2>
+                    <p>Ante cualquier consulta no dudes en comunicarte. Dejá tus datos y consulta utilizando el formulario a
+                        continuacion y nos contactaremos a la brevedad.</p>
+                    <form action="Form" method="POST" class="formulario">
+                        <label for="Nombre">Nombre</label>
+                        <input type="text">
+                        <label for="Nombre">Email</label>
+                        <input type="text">
+                        <label for="Nombre">Asunto</label>
+                        <input type="text">
+                        <label for="Nombre">Mensaje</label>
+                        <textarea type="text" maxlength="600"></textarea>
+                        <button class="btn-enviar" type="button">ENVIAR</button>
+                    </form>
+                </div>
+                <div class="contact-redes">
+                    <h2>NUESTRAS REDES SOCIALES</h2>
+                    <div class="form-social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -87,4 +107,5 @@
         </div>
     </footer>
 </body>
+
 </html>
