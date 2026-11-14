@@ -1,96 +1,231 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
     <title>Tienda de Yerba Mate</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="nav-tienda">
-                <img src="../img/LogoTiendaYerbaMate.png" alt="Logo Tienda Yerba Mate">
-                <ul>
-                    <li><a href="../index.html">HOME</a></li>
-                    <li><a href="tienda.html">NUESTRAS YERBAS MATE</a></li>
-                    <li><a href="tutoriales.html">TUTORIALES</a></li>
-                    <li><a href="menutienda.html">NUESTRO MENÚ</a></li>
-                    <li><a href="trabajatym">TRABAJÁ CON NOSOTROS</a></li>
-                    <li><a href="franquicia.html">FRANQUICIA</a></li>
-                    <li><a href="contacto.html">CONTACTO</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <div>
-                <h2>Dependiendo de cada página</h2>
-            </div>
-        </section>
-        <section>
-            <div>
-                <h2>Agregar contenido de la seccion correspondiente</h2>
-            </div>
-        </section>
-        <section>
-            <div>
-                <h2>Utilizar el espacio necesario.</h2>
-            </div>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="footer-container">
-            <!-- Columna 1: Logo -->
-            <div class="footer-column logo-column">
-                <img src="../img/LogoTiendaYerbaMate.png" alt="">
-            </div>
-            <!-- Columna 2: Contenidos -->
-            <div class="footer-column">
-                <h3>CONTENIDOS</h3>
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="nuestrasYerbas.html">Nuestras Yerbas mate</a></li>
-                    <li><a href="menu.html">Nuestro menú</a></li>
-                </ul>
-            </div>
-            <!-- Columna 3: Necesitas Ayuda -->
-            <div class="footer-column">
-                <h3>NECESITÁS AYUDA</h3>
-                <ul>
-                    <li><a href="tutoriales.html">Tutoriales</a></li>
-                    <li><a href="trabajoConNosotros.html">Trabajá en TYM</a></li>
-                    <li><a href="franquicia.html">Franquicias</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-            <!-- Columna 4: Newsletter -->
-            <div class="footer-column newsletter-column">
-                <h3 class="newsletter-title">¡SUSCRIBITE PARA RECIBIR DESCUENTOS Y NOVEDADES EXCLUSIVAS!</h3>
-                <form action="#" class="newsletter-form">
-                    <input type="text" placeholder="Tu nombre" required>
-                    <input type="email" placeholder="Tu email" required>
-                    <label class="checkbox-container">
-                        <input type="checkbox" checked>
-                        <span class="checkmark"></span>
-                        <span class="checkbox-text">Si, quiero recibir descuentos y novedades.</span>
-                    </label>
-                    <button type="submit">SUSCRIBIRME</button>
-                </form>
-                <div class="social-section">
-                    <h3>CONECTATE CON NOSOTROS</h3>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
+      <nav>
+        <div class="nav-tienda">
+          <img
+            src="../img/LogoTiendaYerbaMate.png"
+            alt="Logo Tienda Yerba Mate"
+          />
+          <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="tienda.html">NUESTRAS YERBAS MATE</a></li>
+            <li><a href="tutoriales.html">TUTORIALES</a></li>
+            <li><a href="menutienda.html">NUESTRO MENÚ</a></li>
+            <li><a href="trabajatym">TRABAJÁ CON NOSOTROS</a></li>
+            <li><a href="franquicia.html">FRANQUICIA</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+          </ul>
         </div>
+      </nav>
+    </header>
+    <main class="pagina-tutoriales">
+      <section class="tutoriales-intro">
+        <div>
+          <h1>TUTORIALES</h1>
+          <p>
+            Preparar un buen mate es un ritual. Nostros te enseñamos a hacerlo
+            de la mejor manera, para que lo disfrutes a pleno. Descubrí nuestra
+            técnica, consejos y secretos para que tu experiencia sea única.
+          </p>
+          <p>
+            La temperatura del agua, el tipo de yerba, el recipiente o la forma
+            de cebar son algunos de los factores que influyen en el sabor y la
+            calidad del mate. Estas guias son un punto de partida para encontrar
+            tu manera favorita de prepararlo.
+          </p>
+
+          <h2>Pequeños consejos</h2>
+          <p>
+            Evitá el agua hirviendo y cebá de manera gradual para conservar el
+            sabor de la yerba y no se te lave.
+          </p>
+        </div>
+      </section>
+
+      <section class="tutoriales-galeria">
+        <details class="tutorial-card">
+          <summary>
+            <img src="../img/prepararMate.png" alt="Preparar el mate" />
+            <h2>PREPARAR EL MATE</h2>
+          </summary>
+
+          <div class="tutorial-info">
+            <h3>Preparar el mate</h3>
+            <p>
+              Llená el mate hasta tres cuartas partes con yerba. Inclinalo para
+              formar una montañita, humedecé la parte baja y colocá la bombilla.
+            </p>
+          </div>
+        </details>
+
+        <details class="tutorial-card">
+          <summary>
+            <img src="../img/tempAgua.png" alt="Temperatura del agua" />
+            <h2>TEMPERATURA DEL AGUA</h2>
+          </summary>
+
+          <div class="tutorial-info">
+            <h3>Temperatura del agua</h3>
+            <p>
+              La temperatura ideal para preparar mate está entre 70 y 80 °C.
+              Evitá utilizar agua hirviendo, ya que puede alterar el sabor de la
+              yerba.
+            </p>
+          </div>
+        </details>
+
+        <details class="tutorial-card">
+          <summary>
+            <img src="../img/seleccionYerbas.png" alt="Elegir la yerba" />
+            <h2>ELEGIR LA YERBA</h2>
+          </summary>
+
+          <div class="tutorial-info">
+            <h3>Elegir la yerba</h3>
+            <p>
+              La yerba con palo ofrece un sabor generalmente más suave, mientras
+              que la yerba despalada proporciona un sabor más intenso. Elegí la
+              que mejor se adapte a tus gustos.
+            </p>
+          </div>
+        </details>
+
+        <details class="tutorial-card">
+          <summary>
+            <img src="../img/curadoMate.png" alt="Curar el mate" />
+            <h2>CURAR EL MATE</h2>
+          </summary>
+
+          <div class="tutorial-info">
+            <h3>Curar el mate</h3>
+            <p>
+              Los mates de calabaza suelen necesitar un curado antes de
+              utilizarse. Colocá yerba húmeda en su interior, dejala reposar y
+              luego retirala cuidadosamente.
+            </p>
+          </div>
+        </details>
+
+        <details class="tutorial-card">
+          <summary>
+            <img src="../img/limpiaBombilla.png" alt="Limpiar la bombilla" />
+            <h2>LIMPIAR LA BOMBILLA</h2>
+          </summary>
+
+          <div class="tutorial-info">
+            <h3>Limpiar la bombilla</h3>
+            <p>
+              Enjuagá la bombilla después de cada uso. Para una limpieza
+              profunda, utilizá agua caliente y un cepillo especial para
+              eliminar los residuos acumulados.
+            </p>
+          </div>
+        </details>
+
+        <details class="tutorial-card">
+          <summary>
+            <img src="../img/terere.png" alt="Preparar tereré" />
+            <h2>PREPARAR TERERÉ</h2>
+          </summary>
+
+          <div class="tutorial-info">
+            <h3>Preparar tereré</h3>
+            <p>
+              Colocá yerba en un recipiente, agregá la bombilla y cebá con agua
+              bien fría. Podés incorporar hielo, menta o cítricos para darle un
+              toque refrescante.
+            </p>
+          </div>
+        </details>
+      </section>
+    </main>
+
+    <!-- Modal de tutoriales -->
+    <dialog id="tutorial-modal" class="tutorial-modal">
+      <button
+        id="cerrar-modal"
+        class="cerrar-modal"
+        type="button"
+        aria-label="Cerrar"
+      >
+        &times;
+      </button>
+
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-descripcion"></p>
+    </dialog>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- Columna 1: Logo -->
+        <div class="footer-column logo-column">
+          <img src="../img/LogoTiendaYerbaMate.png" alt="" />
+        </div>
+        <!-- Columna 2: Contenidos -->
+        <div class="footer-column">
+          <h3>CONTENIDOS</h3>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="nuestrasYerbas.html">Nuestras Yerbas mate</a></li>
+            <li><a href="menu.html">Nuestro menú</a></li>
+          </ul>
+        </div>
+        <!-- Columna 3: Necesitas Ayuda -->
+        <div class="footer-column">
+          <h3>NECESITÁS AYUDA</h3>
+          <ul>
+            <li><a href="tutoriales.html">Tutoriales</a></li>
+            <li><a href="trabajoConNosotros.html">Trabajá en TYM</a></li>
+            <li><a href="franquicia.html">Franquicias</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <!-- Columna 4: Newsletter -->
+        <div class="footer-column newsletter-column">
+          <h3 class="newsletter-title">
+            ¡SUSCRIBITE PARA RECIBIR DESCUENTOS Y NOVEDADES EXCLUSIVAS!
+          </h3>
+          <form action="#" class="newsletter-form">
+            <input type="text" placeholder="Tu nombre" required />
+            <input type="email" placeholder="Tu email" required />
+            <label class="checkbox-container">
+              <input type="checkbox" checked />
+              <span class="checkmark"></span>
+              <span class="checkbox-text"
+                >Si, quiero recibir descuentos y novedades.</span
+              >
+            </label>
+            <button type="submit">SUSCRIBIRME</button>
+          </form>
+          <div class="social-section">
+            <h3>CONECTATE CON NOSOTROS</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
