@@ -162,6 +162,10 @@ body {
   box-shadow: 0 4px 15px var(--box-shadow);
 }
 
+.secretos a, .menues a {
+  cursor: pointer;
+}
+
 .secretos::before,
 .menues::before {
   content: '';
