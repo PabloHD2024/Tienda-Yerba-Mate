@@ -117,24 +117,28 @@ body {
 }
 
 .yerbas {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 230px));
+  justify-content: center;
 }
 
 .yerbas img {
-  width: 250px;
-  height: auto;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .card-yerbas {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
   justify-content: center;
   padding: 15px;
   align-items: center;
   border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .card-yerbas:hover {
