@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/paginas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <title>Tienda de Yerba Mate</title>
+    <title>Tienda de Yerba Mate - Trabajá con nosotros</title>
+    <link rel="icon" href="../img/LogoTiendaYerbaMate.png">
+    <meta name="description" content="Tienda de Yerba Mate: blends, varietales y las mejores yerbas mate.">
 </head>
 <body>
     <header>
         <nav>
             <div class="nav-tienda">
-                <a href="../index.html"><img src="../img/LogoTiendaYerbaMate.png" alt="Logo Tienda Yerba Mate"></a>
+                <a href="../index.html"><img loading="lazy" src="../img/LogoTiendaYerbaMate.png" alt="Logo Tienda Yerba Mate"></a>
                 <ul>
                     <li><a href="nuestrasYerbas.html">NUESTRAS YERBAS MATE</a></li>
                     <li><a href="tutoriales.html">TUTORIALES</a></li>
@@ -27,19 +30,74 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="trabajo-intro">
             <div>
-                <h2>Dependiendo de cada página</h2>
+                <h1>TRABAJÁ CON NOSOTROS</h1>
+                <p>En Tienda de Yerba Mate buscamos personas apasionadas por la cultura del mate, el buen servicio y el trabajo en equipo. Sumate a nuestro equipo y crecé junto a nosotros.</p>
+                <p>Si te identificás con nuestros valores y querés formar parte de una tienda que celebra lo nuestro, envianos tu postulación.</p>
             </div>
         </section>
-        <section>
-            <div>
-                <h2>Agregar contenido de la seccion correspondiente</h2>
+
+        <section class="puestos">
+            <h2>PUESTOS DISPONIBLES</h2>
+            <div class="puestos-grid">
+                <article class="puesto-card">
+                    <h3>Barista / Cafetero</h3>
+                    <p>Preparación de mates, cafés y meriendas. Atención al cliente en barra.</p>
+                    <ul>
+                        <li>Experiencia en gastronomía (deseable)</li>
+                        <li>Disponibilidad fin de semana</li>
+                        <li>Buena presencia y trato</li>
+                    </ul>
+                </article>
+                <article class="puesto-card">
+                    <h3>Vendedor/a de salón</h3>
+                    <p>Asesoramiento de yerbas y accesorios. Reposición y caja.</p>
+                    <ul>
+                        <li>Conocimiento de productos (deseable)</li>
+                        <li>Proactividad y comunicación</li>
+                        <li>Full time o part time</li>
+                    </ul>
+                </article>
+                <article class="puesto-card">
+                    <h3>Encargado/a de tienda</h3>
+                    <p>Liderazgo del equipo, gestión de stock y atención al cliente.</p>
+                    <ul>
+                        <li>Experiencia en liderazgo</li>
+                        <li>Manejo de inventario</li>
+                        <li>Disponibilidad full time</li>
+                    </ul>
+                </article>
             </div>
         </section>
-        <section>
-            <div>
-                <h2>Utilizar el espacio necesario.</h2>
+
+        <section class="contacto">
+            <div class="contact-form">
+                <h2>POSTULATE</h2>
+                <p>Completá el formulario y nos pondremos en contacto a la brevedad.</p>
+                <form action="#" method="POST" class="formulario">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono">
+                    <label for="puesto">Puesto de interés</label>
+                    <input type="text" id="puesto" name="puesto" required>
+                    <label for="cv">CV (PDF)</label>
+                    <input type="file" id="cv" name="cv" accept=".pdf">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" maxlength="600"></textarea>
+                    <button class="btn-enviar" type="submit">ENVIAR</button>
+                </form>
+            </div>
+            <div class="contact-redes">
+                <h2>¿POR QUÉ TYM?</h2>
+                <p>Un ambiente de trabajo cercano, capacitación continua y la posibilidad de crecer dentro de la empresa. Valoramos la iniciativa y el buen trato.</p>
+                <div class="form-social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </section>
     </main>
@@ -47,7 +105,7 @@
         <div class="footer-container">
             <!-- Columna 1: Logo -->
             <div class="footer-column logo-column">
-                <img src="../img/LogoTiendaYerbaMate.png" alt="">
+                <img loading="lazy" src="../img/LogoTiendaYerbaMate.png" alt="">
             </div>
             <!-- Columna 2: Contenidos -->
             <div class="footer-column">
@@ -84,8 +142,8 @@
                 <div class="social-section">
                     <h3>CONECTATE CON NOSOTROS</h3>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>

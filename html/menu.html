@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/paginas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <title>Tienda de Yerba Mate</title>
+    <title>Tienda de Yerba Mate - Nuestro menú</title>
+    <link rel="icon" href="../img/LogoTiendaYerbaMate.png">
+    <meta name="description" content="Tienda de Yerba Mate: blends, varietales y las mejores yerbas mate.">
 </head>
 <body>
     <header>
         <nav>
             <div class="nav-tienda">
-                <a href="../index.html"><img src="../img/LogoTiendaYerbaMate.png" alt="Logo Tienda Yerba Mate"></a>
+                <a href="../index.html"><img loading="lazy" src="../img/LogoTiendaYerbaMate.png" alt="Logo Tienda Yerba Mate"></a>
                 <ul>
                     <li><a href="nuestrasYerbas.html">NUESTRAS YERBAS MATE</a></li>
                     <li><a href="tutoriales.html">TUTORIALES</a></li>
@@ -27,19 +30,93 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="menu-intro">
             <div>
-                <h2>Dependiendo de cada página</h2>
+                <h1>NUESTRO MENÚ</h1>
+                <p>Vení a disfrutar de nuestras meriendas especiales, bebidas y acompañamientos. Todo pensado para que tu momento mate sea completo.</p>
+                <p>Elegí tu combinación favorita y acompañala con nuestras yerbas mate.</p>
             </div>
         </section>
-        <section>
-            <div>
-                <h2>Agregar contenido de la seccion correspondiente</h2>
+
+        <section class="menu-categoria">
+            <h2>BEBIDAS CALIENTES</h2>
+            <div class="menu-grid">
+                <article class="menu-card">
+                    <img loading="lazy" src="../img/mate-yerba-bombilla-fondo-1.png" alt="Mate cocido">
+                    <div class="menu-info">
+                        <h3>Mate cocido</h3>
+                        <p>Mate cocido clásico, suave y reconfortante.</p>
+                        <span class="menu-precio">$ 900</span>
+                    </div>
+                </article>
+                <article class="menu-card">
+                    <img loading="lazy" src="../img/tempAgua.png" alt="Café con leche">
+                    <div class="menu-info">
+                        <h3>Café con leche</h3>
+                        <p>Café recién hecho con leche espumosa.</p>
+                        <span class="menu-precio">$ 1.100</span>
+                    </div>
+                </article>
+                <article class="menu-card">
+                    <img loading="lazy" src="../img/seleccionYerbas.png" alt="Té de hierbas">
+                    <div class="menu-info">
+                        <h3>Té de hierbas</h3>
+                        <p>Infusión de hierbas naturales.</p>
+                        <span class="menu-precio">$ 850</span>
+                    </div>
+                </article>
             </div>
         </section>
-        <section>
-            <div>
-                <h2>Utilizar el espacio necesario.</h2>
+
+        <section class="menu-categoria">
+            <h2>TERERÉ</h2>
+            <div class="menu-grid">
+                <article class="menu-card">
+                    <img loading="lazy" src="../img/terere.png" alt="Tereré clásico">
+                    <div class="menu-info">
+                        <h3>Tereré clásico</h3>
+                        <p>Yerba para tereré con agua fría y hielo.</p>
+                        <span class="menu-precio">$ 1.000</span>
+                    </div>
+                </article>
+                <article class="menu-card">
+                    <img loading="lazy" src="../img/merienda-mate-1.png" alt="Tereré con menta">
+                    <div class="menu-info">
+                        <h3>Tereré con menta</h3>
+                        <p>Tereré refrescante con menta y cítricos.</p>
+                        <span class="menu-precio">$ 1.200</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="menu-categoria">
+            <h2>MERIENDAS</h2>
+            <div class="menu-grid">
+                <article class="menu-card">
+                    <img loading="lazy" src="../img/merienda-mate-1.png" alt="Merienda tradicional">
+                    <div class="menu-info">
+                        <h3>Merienda tradicional</h3>
+                        <p>Tostadas, mermelada casera y mate cocido.</p>
+                        <span class="menu-precio">$ 2.500</span>
+                    </div>
+                </article>
+                <article class="menu-card">
+                    <img loading="lazy" src="../img/merienda-mate-2.png" alt="Merienda dulce">
+                    <div class="menu-info">
+                        <h3>Merienda dulce</h3>
+                        <p>Medialunas, alfajor y bebida caliente.</p>
+                        <span class="menu-precio">$ 2.800</span>
+                    </div>
+                </article>
+                <article class="menu-card">
+                    <img loading="lazy" src="../img/mate-yerba-bombilla-fondo-2.png" alt="Combo mate">
+                    <div class="menu-info">
+                        <h3>Combo mate</h3>
+                        <p>Mate, yerba y acompañamiento dulce.</p>
+                        <span class="menu-precio">$ 3.200</span>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
@@ -47,7 +124,7 @@
         <div class="footer-container">
             <!-- Columna 1: Logo -->
             <div class="footer-column logo-column">
-                <img src="../img/LogoTiendaYerbaMate.png" alt="">
+                <img loading="lazy" src="../img/LogoTiendaYerbaMate.png" alt="">
             </div>
             <!-- Columna 2: Contenidos -->
             <div class="footer-column">
@@ -84,8 +161,8 @@
                 <div class="social-section">
                     <h3>CONECTATE CON NOSOTROS</h3>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
