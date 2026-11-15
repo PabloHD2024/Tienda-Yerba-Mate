@@ -113,7 +113,7 @@ body {
   font-size: 40px;
   text-align: center;
   margin: 20px 0 20px;
-  color:var(--primary-dark);
+  color: var(--primary-dark);
 }
 
 .yerbas {
@@ -160,6 +160,10 @@ body {
   justify-content: center;
   overflow: hidden;
   box-shadow: 0 4px 15px var(--box-shadow);
+}
+
+.secretos a, .menues a {
+  cursor: pointer;
 }
 
 .secretos::before,
@@ -589,11 +593,11 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
-  font-size: 1.6rem; 
+  font-size: 1.6rem;
 }
 
 .contacto h2::after {
-  content: "";
+  content: '';
   flex-grow: 1;
   height: 1px;
   background-color: var(--border-light-gray);
@@ -618,7 +622,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 700px;
-  color: var(--text-gray)
+  color: var(--text-gray);
 }
 
 .formulario label {
@@ -642,7 +646,6 @@ body {
   color: var(--text-white);
   font-weight: 800;
   cursor: pointer;
-
 }
 
 .contact-redes {
@@ -676,7 +679,6 @@ body {
 .form-social-icons a:hover {
   background-color: var(--secondary);
 }
-
 
 /* Responsive */
 
@@ -718,6 +720,109 @@ body {
   color: white;
   font-size: 28px;
   line-height: 1;
+}
+
+/* ========== FRANQUICIAS ========== */
+
+.pagina-franquicias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 650px;
+  padding: 80px 20px;
+}
+
+.franquicias-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.franquicias-subtitulo {
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.franquicias-contenido h1 {
+  font-size: 3rem;
+  color: var(--primary-dark);
+  margin-bottom: 35px;
+}
+
+.franquicias-descripcion {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-gray);
+  margin-bottom: 20px;
+}
+
+.franquicias-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+  padding: 15px 30px;
+
+  background-color: var(--primary);
+  color: var(--text-white);
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 4px;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.franquicias-boton:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+.franquicias-boton i {
+  font-size: 1.5rem;
+}
+
+.franquicias-separador {
+  width: 250px;
+  height: 3px;
+  background-color: var(--primary);
+  margin: 0 auto 30px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .pagina-franquicias {
+    min-height: 500px;
+    padding: 60px 20px;
+  }
+
+  .franquicias-contenido h1 {
+    font-size: 3rem;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .franquicias-contenido h1 {
+    font-size: 1.8rem;
+  }
+
+  .franquicias-descripcion {
+    font-size: 1rem;
+  }
+
+  .franquicias-boton {
+    font-size: 0.9rem;
+    padding: 12px 18px;
+  }
 }
 
 /* --- Responsive Design --- */
