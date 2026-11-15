@@ -139,3 +139,140 @@
     font-size: 2.2rem;
   }
 }
+
+/* Nuestras Yerbas Mate*/
+.tienda-yerbas {
+  background-color: var(--border-white);
+  padding: 40px 52px 70px;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 36px;
+  max-width: 1620px;
+  margin: 0 auto;
+}
+
+.producto-card {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto;
+  outline: none;
+}
+
+.producto-card > img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background-color: #e4e3e3;
+  display: block;
+}
+
+.producto-nombre {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-black);
+  padding-top: 14px;
+}
+
+.producto-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  background-color: #e4e3e3;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.producto-card:hover .producto-hover,
+.producto-card:focus .producto-hover,
+.producto-card:focus-within .producto-hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.producto-card:focus-visible > img {
+  outline: 3px solid var(--button);
+  outline-offset: 2px;
+}
+
+.producto-panel {
+  width: 62%;
+  height: 100%;
+  background-color: var(--panel-color, #0e1722);
+  color: var(--text-white);
+  padding: 44px 28px 30px;
+  border-radius: 0 0 40px 40px;
+  overflow: hidden;
+}
+
+.producto-panel h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding-bottom: 38px;
+  background: repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.9) 0 2px,
+      transparent 2px 6px
+    ) bottom / 100% 26px no-repeat;
+  margin-bottom: 26px;
+}
+
+.producto-desc {
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.5;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.producto-destacado {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.producto-card--normal   { --panel-color: #01351b; }
+.producto-card--suave    { --panel-color: #7a7a22; }
+.producto-card--hierbas  { --panel-color: #617362; }
+.producto-card--coco     { --panel-color: #864b1c; }
+.producto-card--organica { --panel-color: #739484; }
+.producto-card--despalada{ --panel-color: #663946; }
+
+@media (max-width: 992px) {
+  .tienda-yerbas {
+    padding: 30px 24px 50px;
+  }
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+  .producto-panel {
+    width: 78%;
+    padding: 28px 20px 20px;
+  }
+  .producto-panel h3 {
+    font-size: 1.15rem;
+    padding-bottom: 30px;
+    margin-bottom: 16px;
+  }
+  .producto-desc,
+  .producto-destacado {
+    font-size: 0.9rem;
+  }
+}
