@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/paginas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,13 +11,17 @@
     <title>Tienda de Yerba Mate - Nuestras Yerbas Mate</title>
     <link rel="icon" href="../img/LogoTiendaYerbaMate.png">
     <meta name="description" content="Tienda de Yerba Mate: blends, varietales y las mejores yerbas mate.">
+    <script src="../js/menu.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
             <div class="nav-tienda">
                 <a href="../index.html"><img loading="lazy" src="../img/LogoTiendaYerbaMate.png" alt="Logo Tienda Yerba Mate"></a>
-                <ul>
+                <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul id="menu-principal">
                     <li><a href="nuestrasYerbas.html">NUESTRAS YERBAS MATE</a></li>
                     <li><a href="tutoriales.html">TUTORIALES</a></li>
                     <li><a href="menu.html">NUESTRO MENÚ</a></li>

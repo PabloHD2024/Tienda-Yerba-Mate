@@ -1,23 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/styles.css" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="../css/styles.css" >
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
       rel="stylesheet"
-    />
+    >
     <title>Tienda de Yerba Mate</title>
-  </head>
+      <script src="../js/menu.js" defer></script>
+</head>
   <body>
     <header>
       <nav>
@@ -26,8 +27,11 @@
             ><img
               src="../img/LogoTiendaYerbaMate.png"
               alt="Logo Tienda Yerba Mate"
-          /></a>
-          <ul>
+          ></a>
+          <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul id="menu-principal">
             <li><a href="nuestrasYerbas.html">NUESTRAS YERBAS MATE</a></li>
             <li><a href="tutoriales.html">TUTORIALES</a></li>
             <li><a href="menu.html">NUESTRO MENÚ</a></li>
@@ -49,7 +53,7 @@
 
         <p class="franquicias-descripcion">
           ¿Querés ser parte de Tienda de Yerba Mate?
-          <br />
+          <br >
           Sumate a nuestro proyecto y compartí la pasión por una de las
           tradiciones más importantes de nuestra cultura.
         </p>
@@ -76,7 +80,7 @@
       <div class="footer-container">
         <!-- Columna 1: Logo -->
         <div class="footer-column logo-column">
-          <img src="../img/LogoTiendaYerbaMate.png" alt="" />
+          <img src="../img/LogoTiendaYerbaMate.png" alt="" >
         </div>
         <!-- Columna 2: Contenidos -->
         <div class="footer-column">
@@ -103,10 +107,10 @@
             ¡SUSCRIBITE PARA RECIBIR DESCUENTOS Y NOVEDADES EXCLUSIVAS!
           </h3>
           <form action="#" class="newsletter-form">
-            <input type="text" placeholder="Tu nombre" required />
-            <input type="email" placeholder="Tu email" required />
+            <input type="text" placeholder="Tu nombre" required >
+            <input type="email" placeholder="Tu email" required >
             <label class="checkbox-container">
-              <input type="checkbox" checked />
+              <input type="checkbox" checked >
               <span class="checkmark"></span>
               <span class="checkbox-text"
                 >Si, quiero recibir descuentos y novedades.</span

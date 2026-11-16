@@ -13,6 +13,7 @@
     <title>Tienda de Yerba Mate</title>
     <link rel="icon" href="../img/LogoTiendaYerbaMate.png">
     <meta name="description" content="Tienda de Yerba Mate: blends, varietales y las mejores yerbas mate.">
+    <script src="../js/menu.js" defer></script>
 </head>
 
 <body>
@@ -20,7 +21,10 @@
         <nav>
             <div class="nav-tienda">
                 <a href="../index.html"><img loading="lazy" src="../img/LogoTiendaYerbaMate.png" alt="Logo Tienda Yerba Mate"></a>
-                <ul>
+                <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul id="menu-principal">
                     <li><a href="nuestrasYerbas.html">NUESTRAS YERBAS MATE</a></li>
                     <li><a href="tutoriales.html">TUTORIALES</a></li>
                     <li><a href="menu.html">NUESTRO MENÚ</a></li>
@@ -38,16 +42,16 @@
                     <h2>COMUNICATE CON NOSOTROS</h2>
                     <p>Ante cualquier consulta no dudes en comunicarte. Dejá tus datos y consulta utilizando el formulario a
                         continuacion y nos contactaremos a la brevedad.</p>
-                    <form action="Form" method="POST" class="formulario">
-                        <label for="Nombre">Nombre</label>
-                        <input type="text">
-                        <label for="Nombre">Email</label>
-                        <input type="text">
-                        <label for="Nombre">Asunto</label>
-                        <input type="text">
-                        <label for="Nombre">Mensaje</label>
-                        <textarea type="text" maxlength="600"></textarea>
-                        <button class="btn-enviar" type="button">ENVIAR</button>
+                    <form action="#" method="POST" class="formulario">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" maxlength="600"></textarea>
+                        <button class="btn-enviar" type="submit">ENVIAR</button>
                     </form>
                 </div>
                 <div class="contact-redes">

@@ -13,6 +13,7 @@
     <title>Tienda de Yerba Mate</title>
     <link rel="icon" href="./img/LogoTiendaYerbaMate.png">
     <meta name="description" content="Tienda de Yerba Mate: blends, varietales y las mejores yerbas mate.">
+    <script src="./js/menu.js" defer></script>
 </head>
 
 <body>
@@ -20,7 +21,10 @@
         <nav>
             <div class="nav-tienda">
                 <a href="index.html"><img loading="lazy" src="./img/LogoTiendaYerbaMate.png" alt="Logo Tienda Yerba Mate"></a>
-                <ul>
+                <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul id="menu-principal">
                     <li><a href="./html/nuestrasYerbas.html">NUESTRAS YERBAS MATE</a></li>
                     <li><a href="./html/tutoriales.html">TUTORIALES</a></li>
                     <li><a href="./html/menu.html">NUESTRO MENÚ</a></li>

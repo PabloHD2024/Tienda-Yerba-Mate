@@ -15,8 +15,6 @@
   --social-icons: #00290c;
   --button: #61d356;
   --nav-color: #000000;
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.3);
   --background-color: #e9e9e9;
   --box-shadow: rgba(0, 0, 0, 0.4);
   --border-white: #ffffff;
@@ -34,6 +32,8 @@ body {
   background-color: var(--bg);
 }
 
+/* Navegacion */
+ 
 .nav-tienda {
   display: flex;
   flex-direction: row;
@@ -53,6 +53,7 @@ body {
 .nav-tienda ul {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   list-style: none;
   margin: 0 auto;
@@ -74,8 +75,50 @@ body {
 
 .nav-tienda ul li a:hover {
   color: var(--secondary);
-  text-decoration: none;
 }
+
+img {
+  max-width: 100%;
+}
+
+/* Botón hamburguesa (solo visible en pantallas chicas) */
+.nav-toggle {
+  display: none;
+  width: 46px;
+  height: 46px;
+  padding: 11px 9px;
+  background: none;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 3px;
+  margin: 5px 0;
+  background-color: var(--text-white);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.nav-toggle:focus-visible,
+.nav-tienda ul li a:focus-visible {
+  outline: 2px solid var(--button);
+  outline-offset: 2px;
+}
+
+.nav-tienda.abierto .nav-toggle span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.nav-tienda.abierto .nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+.nav-tienda.abierto .nav-toggle span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Home / Index */
 
 .slider-contenedor {
   display: flex;
@@ -166,7 +209,8 @@ body {
   box-shadow: 0 4px 15px var(--box-shadow);
 }
 
-.secretos a, .menues a {
+.secretos a,
+.menues a {
   cursor: pointer;
 }
 
@@ -278,6 +322,10 @@ body {
   color: var(--text-gray);
 }
 
+.tipos {
+  margin-bottom: 50px;
+}
+
 .yerba-tipos {
   display: flex;
   flex-direction: row;
@@ -285,11 +333,7 @@ body {
   margin-top: 70px;
 }
 
-.yerba-tipos h3 {
-  font-size: 20px;
-  color: var(--primary);
-  margin-top: 20px;
-}
+.yerba-tipos h3 { font-size: 20px; color: var(--primary); margin-top: 20px; }
 
 .yerba-tipos p {
   width: 350px;
@@ -303,7 +347,8 @@ body {
   margin-bottom: 40px;
 }
 
-/* --- Estilos del Footer --- */
+/*Footer */
+
 .site-footer {
   background-color: var(--primary-dark);
   color: var(--text-white);
@@ -321,13 +366,11 @@ body {
   gap: 40px;
 }
 
-/* Columnas */
 .footer-column {
   flex: 1;
   min-width: 200px;
 }
 
-/* Títulos (Headers) */
 .footer-column h3 {
   color: var(--text-green);
   font-size: 16px;
@@ -337,7 +380,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* Logo */
 .logo-column {
   flex: 1.5;
 }
@@ -346,7 +388,6 @@ body {
   width: 120px;
 }
 
-/* Listas de enlaces */
 .footer-column ul {
   list-style: none;
 }
@@ -364,10 +405,8 @@ body {
 
 .footer-column ul li a:hover {
   color: var(--secondary);
-  text-decoration: none;
 }
 
-/* --- Formulario Newsletter --- */
 .newsletter-column {
   flex: 1.5;
 }
@@ -393,7 +432,6 @@ body {
   color: var(--text-gray);
 }
 
-/* Checkbox personalizado */
 .checkbox-container {
   display: flex;
   align-items: center;
@@ -408,7 +446,6 @@ body {
   accent-color: var(--secondary);
 }
 
-/* Botón */
 .newsletter-form button {
   background-color: var(--button);
   color: var(--text-gray);
@@ -428,7 +465,6 @@ body {
   color: var(--text-white);
 }
 
-/* Redes Sociales */
 .social-section {
   margin-top: 30px;
 }
@@ -462,7 +498,7 @@ body {
   background-color: var(--secondary);
 }
 
-/* ========== TUTORIALES ========== */
+/* TUTORIALES */
 
 .tutoriales-intro {
   max-width: 1000px;
@@ -488,8 +524,6 @@ body {
   color: var(--text-gray);
   margin-bottom: 15px;
 }
-
-/* Galería de seis tarjetas */
 
 .tutoriales-galeria {
   display: grid;
@@ -533,8 +567,6 @@ body {
   text-align: center;
 }
 
-/* Efecto Hover */
-
 .tutorial-card:hover img {
   transform: scale(1.08);
 }
@@ -542,7 +574,6 @@ body {
 .tutorial-card:hover::after {
   background: rgba(0, 0, 0, 0.55);
 }
-/* Tarjetas interactivas sin JavaScript */
 
 .tutorial-card summary {
   list-style: none;
@@ -558,15 +589,12 @@ body {
   position: absolute;
   inset: 0;
   z-index: 2;
-
   background: var(--primary-dark);
   color: white;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   padding: 25px;
   text-align: center;
 }
@@ -581,7 +609,29 @@ body {
   line-height: 1.5;
 }
 
-/* Formulario de contacto */
+.tutorial-card[open] summary {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.tutorial-card[open] summary img,
+.tutorial-card[open] summary h2 {
+  display: none;
+}
+
+.tutorial-card[open] summary::after {
+  content: '×';
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  color: white;
+  font-size: 28px;
+  line-height: 1;
+}
+
+/* CONTACTO / TRABAJÁ CON NOSOTROS (formularios) */
 
 .contacto {
   display: flex;
@@ -613,19 +663,23 @@ body {
   flex-direction: column;
   justify-content: center;
   width: 750px;
+  max-width: 100%;
   border-right: 0.5px solid var(--border-light-gray);
+  padding-right: 20px;
 }
 
 .contact-form p {
   margin-bottom: 20px;
   color: var(--text-gray);
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
 }
 
 .formulario {
   display: flex;
   flex-direction: column;
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
   color: var(--text-gray);
 }
 
@@ -633,13 +687,15 @@ body {
   padding: 10px 0;
 }
 
-.formulario input {
+.formulario input,
+.formulario textarea {
   padding: 10px;
+  font-family: 'Oswald', sans-serif;
 }
 
 .formulario textarea {
-  padding: 10px;
   height: 300px;
+  resize: vertical;
 }
 
 .btn-enviar {
@@ -650,12 +706,14 @@ body {
   color: var(--text-white);
   font-weight: 800;
   cursor: pointer;
+  border: none;
 }
 
 .contact-redes {
   display: flex;
   flex-direction: column;
   width: 650px;
+  max-width: 100%;
 }
 
 .form-social-icons {
@@ -684,49 +742,7 @@ body {
   background-color: var(--secondary);
 }
 
-/* Responsive */
-
-@media (max-width: 768px) {
-  .tutoriales-galeria {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .tutoriales-galeria {
-    grid-template-columns: 1fr;
-  }
-
-  .tutoriales-intro h1 {
-    font-size: 2rem;
-  }
-}
-
-/* Mantener el summary por encima del contenido */
-.tutorial-card[open] summary {
-  position: absolute;
-  inset: 0;
-  z-index: 5;
-  cursor: pointer;
-}
-
-/* Ocultar imagen y título cuando está abierto */
-.tutorial-card[open] summary img,
-.tutorial-card[open] summary h2 {
-  display: none;
-}
-
-/* Indicador visual para cerrar */
-.tutorial-card[open] summary::after {
-  position: absolute;
-  top: 8px;
-  right: 15px;
-  color: white;
-  font-size: 28px;
-  line-height: 1;
-}
-
-/* ========== FRANQUICIAS ========== */
+/* FRANQUICIAS */
 
 .pagina-franquicias {
   display: flex;
@@ -771,16 +787,12 @@ body {
   gap: 12px;
   margin-top: 25px;
   padding: 15px 30px;
-
   background-color: var(--primary);
   color: var(--text-white);
   text-decoration: none;
   font-size: 1.1rem;
   border-radius: 4px;
-
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .franquicias-boton:hover {
@@ -799,48 +811,670 @@ body {
   margin: 0 auto 30px;
 }
 
-/* Responsive */
+/* TRABAJO Y MENÚ */
 
+.trabajo-intro,
+.menu-intro {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 70px 25px;
+  text-align: center;
+}
+
+.trabajo-intro h1,
+.menu-intro h1 {
+  font-size: 3rem;
+  color: var(--primary-dark);
+  margin-bottom: 30px;
+}
+
+.trabajo-intro p,
+.menu-intro p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-gray);
+  margin-bottom: 15px;
+}
+
+/* Puestos de trabajo */
+.puestos {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 25px 60px;
+}
+
+.puestos h2 {
+  text-align: center;
+  color: var(--primary-dark);
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.puestos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.puesto-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--primary);
+}
+
+.puesto-card h3 {
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.puesto-card p {
+  color: var(--text-gray);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.puesto-card ul {
+  margin-left: 20px;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+/* Menú */
+.menu-categoria {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 25px 40px;
+}
+
+.menu-categoria h2 {
+  color: var(--primary-dark);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--border-light-gray);
+  padding-bottom: 8px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.menu-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-info {
+  padding: 16px;
+}
+
+.menu-info h3 {
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+}
+
+.menu-info p {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.menu-precio {
+  display: inline-block;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Nuestras Yerbas - Tienda */
+.tienda-yerbas {
+  background-color: var(--border-white);
+  padding: 40px 52px 70px;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 36px;
+  max-width: 1620px;
+  margin: 0 auto;
+}
+
+.producto-card {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto;
+  outline: none;
+}
+
+.producto-card > img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background-color: #e4e3e3;
+  display: block;
+}
+
+.producto-nombre {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-black);
+  padding-top: 14px;
+}
+
+.producto-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  background-color: #e4e3e3;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.producto-card:hover .producto-hover,
+.producto-card:focus .producto-hover,
+.producto-card:focus-within .producto-hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.producto-card:focus-visible > img {
+  outline: 3px solid var(--button);
+  outline-offset: 2px;
+}
+
+.producto-panel {
+  width: 62%;
+  height: 100%;
+  background-color: var(--panel-color, #0e1722);
+  color: var(--text-white);
+  padding: 44px 28px 30px;
+  border-radius: 0 0 40px 40px;
+  overflow: hidden;
+}
+
+.producto-panel h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding-bottom: 38px;
+  background: repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.9) 0 2px,
+      transparent 2px 6px
+    ) bottom / 100% 26px no-repeat;
+  margin-bottom: 26px;
+}
+
+.producto-desc {
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.5;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.producto-destacado {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.producto-card--normal   { --panel-color: #01351b; }
+.producto-card--suave    { --panel-color: #7a7a22; }
+.producto-card--hierbas  { --panel-color: #617362; }
+.producto-card--coco     { --panel-color: #864b1c; }
+.producto-card--organica { --panel-color: #739484; }
+.producto-card--despalada{ --panel-color: #663946; }
+
+.tutorial-modal {
+  border: none;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 500px;
+  width: 90%;
+  margin: auto;
+  background: var(--card);
+  box-shadow: var(--shadow-lg);
+}
+.tutorial-modal::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+.cerrar-modal {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-gray);
+}
+
+
+/* ============================================================
+   MEDIA QUERIES (de mayor a menor)
+   ============================================================ */
+
+/* --- 1400px: cuadro de yerbas del home deja de desbordar --- */
+@media (max-width: 1400px) {
+  .yerba-tipos {
+    gap: 20px;
+    padding: 0 20px;
+  }
+  .yerba-tipos > div {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .yerba-tipos > div:nth-child(2) {
+    flex: 1.2 1 0;
+  }
+  .yerba-tipos p {
+    width: 100%;
+  }
+  .yerba-tipos img {
+    width: 100%;
+  }
+}
+
+/* --- 1300px: menú más compacto antes de pasar a hamburguesa --- */
+@media (max-width: 1300px) {
+  .nav-tienda {
+    padding: 30px 20px;
+  }
+  .nav-tienda img {
+    margin-left: 20px;
+  }
+  .nav-tienda ul {
+    gap: 8px;
+  }
+  .nav-tienda ul li {
+    padding: 6px;
+  }
+  .nav-tienda ul li a {
+    font-size: 16px;
+  }
+}
+
+/* --- 1100px: MENÚ HAMBURGUESA --- */
+@media (max-width: 1100px) {
+  .nav-tienda {
+    justify-content: space-between;
+    padding: 18px 24px;
+  }
+  .nav-tienda img {
+    width: 90px;
+    margin-left: 0;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .nav-tienda ul {
+    flex-basis: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 0.35s ease, margin-top 0.35s ease, visibility 0.35s;
+  }
+  .nav-tienda.abierto ul {
+    max-height: 460px;
+    margin-top: 14px;
+    visibility: visible;
+  }
+  .nav-tienda ul li {
+    padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .nav-tienda ul li a {
+    display: block;
+    padding: 15px 10px;
+    font-size: 17px;
+  }
+}
+
+/* --- 992px: tablet --- */
+@media (max-width: 992px) {
+  /* Home: tipos de yerba en una columna */
+  .yerba-tipos {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  .yerba-tipos > div,
+  .yerba-tipos > div:nth-child(2) {
+    flex: none;
+    width: 100%;
+    max-width: 600px;
+  }
+  .yerba-tipos img {
+    margin-bottom: 0;
+  }
+
+  /* Tutoriales */
+  .tutoriales-galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contacto / Trabajá con nosotros */
+  .contacto {
+    gap: 30px;
+  }
+  .contact-form,
+  .contact-redes {
+    width: 100%;
+    border-right: none;
+    padding-right: 0;
+  }
+
+  /* Nuestras yerbas */
+  .tienda-yerbas {
+    padding: 30px 24px 50px;
+  }
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+  }
+  .producto-panel {
+    width: 80%;
+    padding: 28px 18px 18px;
+  }
+  .producto-panel h3 {
+    font-size: 1.1rem;
+    padding-bottom: 30px;
+    margin-bottom: 16px;
+  }
+  .producto-desc,
+  .producto-destacado {
+    font-size: 0.85rem;
+  }
+
+  /* Footer: 2 columnas */
+  .site-footer {
+    padding: 50px 40px;
+  }
+  .footer-container {
+    margin: 0;
+    gap: 30px;
+  }
+  .footer-column {
+    flex: 1 1 calc(50% - 30px);
+  }
+  .logo-column,
+  .newsletter-column {
+    flex: 1 1 100%;
+  }
+}
+
+/* --- 768px: tablet chica / celular grande --- */
 @media (max-width: 768px) {
+  /* Slider */
+  .slider-contenedor {
+    min-height: 380px;
+  }
+  .slider-text {
+    margin-left: 20px;
+    padding: 15px;
+  }
+  .slider-text h2 {
+    font-size: 45px;
+  }
+  .slider-text p {
+    font-size: 18px;
+  }
+
+  /* Home: secciones */
+  .productos h2 {
+    font-size: 34px;
+  }
+  .info-section {
+    gap: 30px;
+  }
+  .titulo-yerbas h2 {
+    font-size: 36px;
+  }
+  .titulo-yerbas h3 {
+    font-size: 24px;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  /* Intros */
+  .trabajo-intro,
+  .menu-intro,
+  .tutoriales-intro {
+    padding: 45px 20px;
+  }
+  .trabajo-intro h1,
+  .menu-intro h1,
+  .tutoriales-intro h1 {
+    font-size: 2.2rem;
+  }
+  .trabajo-intro p,
+  .menu-intro p,
+  .tutoriales-intro p {
+    font-size: 1.05rem;
+  }
+
+  /* Tutoriales */
+  .tutorial-card h2 {
+    font-size: 1.3rem;
+  }
+  .tutorial-info h3 {
+    font-size: 1.3rem;
+  }
+
+  /* Contacto */
+  .contacto {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 20px;
+  }
+  .contacto h2 {
+    font-size: 1.3rem;
+  }
+  .contacto h2::after {
+    margin-right: 0;
+  }
+  .formulario textarea {
+    height: 220px;
+  }
+  .form-social-icons {
+    flex-direction: row;
+  }
+
+  /* Franquicias */
   .pagina-franquicias {
     min-height: 500px;
     padding: 60px 20px;
   }
-
   .franquicias-contenido h1 {
-    font-size: 3rem;
-    color: var(--primary-dark);
+    font-size: 2.2rem;
     margin-bottom: 15px;
   }
-}
 
-@media (max-width: 480px) {
-  .franquicias-contenido h1 {
-    font-size: 1.8rem;
+  /* Menú y puestos */
+  .menu-categoria,
+  .puestos {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .puestos h2,
+  .menu-categoria h2 {
+    font-size: 1.6rem;
   }
 
-  .franquicias-descripcion {
-    font-size: 1rem;
+  /* Footer: 1 columna */
+  .site-footer {
+    padding: 40px 25px;
   }
-
-  .franquicias-boton {
-    font-size: 0.9rem;
-    padding: 12px 18px;
-  }
-}
-
-/* --- Responsive Design --- */
-@media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     gap: 30px;
   }
+  .footer-column,
+  .logo-column,
+  .newsletter-column {
+    flex: none;
+    width: 100%;
+    min-width: 0;
+  }
+}
 
-  .logo-column {
-    margin-bottom: 20px;
+/* --- 600px: celular --- */
+@media (max-width: 600px) {
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+  .producto-panel {
+    width: 74%;
+    padding: 32px 22px 22px;
+  }
+  .producto-panel h3 {
+    font-size: 1.2rem;
+  }
+  .producto-desc,
+  .producto-destacado {
+    font-size: 0.95rem;
+  }
+}
+
+/* --- 480px: celular chico --- */
+@media (max-width: 480px) {
+  .nav-tienda {
+    padding: 14px 18px;
+  }
+  .nav-tienda img {
+    width: 75px;
   }
 
-  .newsletter-column {
+  .slider-contenedor {
+    min-height: 320px;
+  }
+  .slider-text h2 {
+    font-size: 34px;
+  }
+  .slider-text p {
+    font-size: 16px;
+  }
+
+  .productos {
+    padding: 10px;
+  }
+  .productos h2 {
+    font-size: 30px;
+  }
+  .info-section {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+  .secretos,
+  .menues {
+    height: 300px;
+  }
+  .secretos h2,
+  .menues h2,
+  .secretos p,
+  .menues p,
+  .secretos .btn-ver,
+  .menues .btn-ver {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .secretos h2,
+  .menues h2 {
+    font-size: 1.6rem;
+  }
+  .titulo-yerbas h2 {
+    font-size: 32px;
+  }
+  .titulo-yerbas h3 {
+    font-size: 22px;
+  }
+  .yerba-tipos {
+    padding: 0 15px;
+  }
+  .yerba-tipos p {
+    font-size: 14px;
+  }
+
+  .tutoriales-galeria {
+    grid-template-columns: 1fr;
+    padding: 20px 20px 60px;
+  }
+  .tutoriales-intro h1 {
+    font-size: 2rem;
+  }
+
+  .puestos-grid,
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+  .menu-card img {
+    height: 180px;
+  }
+
+  .franquicias-contenido h1 {
+    font-size: 1.8rem;
+  }
+  .franquicias-descripcion {
+    font-size: 1rem;
+  }
+  .franquicias-boton {
+    font-size: 0.9rem;
+    padding: 12px 18px;
+  }
+  .franquicias-separador {
+    width: 160px;
+  }
+
+  .contacto {
+    padding: 15px;
+  }
+  .btn-enviar {
     width: 100%;
+  }
+
+  .tienda-yerbas {
+    padding: 20px 16px 40px;
+  }
+}
+
+/* Respetar a quienes reducen el movimiento */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
   }
 }
